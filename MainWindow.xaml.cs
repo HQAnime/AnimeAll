@@ -1,4 +1,5 @@
-﻿using Microsoft.Toolkit.Wpf.UI.Controls;
+﻿using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
+using Microsoft.Toolkit.Wpf.UI.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,14 @@ namespace AnimeAll
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly string[] script = new string[]
+        {
+            "$('.image-with-text').remove();",
+            "$('.ad-bebi').remove();",
+            "$('.anime_video_body_comment_center').remove();",
+            "alert('hello world')"
+        };
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +44,7 @@ namespace AnimeAll
         {
             if ((sender as WebView).ContainsFullScreenElement)
             {
+                // Fullscreen
                 rootWindow.Visibility = Visibility.Collapsed;
                 rootWindow.WindowStyle = WindowStyle.None;
                 rootWindow.ResizeMode = ResizeMode.NoResize;
@@ -44,11 +54,18 @@ namespace AnimeAll
             }
             else
             {
+                // Exit Fullscreen
                 rootWindow.WindowStyle = WindowStyle.SingleBorderWindow;
                 rootWindow.WindowState = WindowState.Normal;
                 rootWindow.ResizeMode = ResizeMode.CanResize;
                 rootWindow.Topmost = false;
             }
+        }
+
+        private void weball_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        {
+            weball.InvokeScriptAsync("eval", this.script);
+            Console.WriteLine("Script has been invoked");
         }
     }
 }

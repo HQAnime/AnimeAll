@@ -10,7 +10,7 @@
         Title="AnimeAll" Height="450" Width="800">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top">Hello</TextBlock>
-        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" NewWindowRequested="weball_NewWindowRequested" 
-            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged" />
+        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" NewWindowRequested="weball_NewWindowRequested"
+            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged" DOMContentLoaded="weball_DOMContentLoaded"/>
     </DockPanel>
 </Window>
