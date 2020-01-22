@@ -6,12 +6,30 @@
         x:Name="rootWindow"
         xmlns:local="clr-namespace:AnimeAll"
         xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="AnimeAll" Height="450" Width="800">
     <DockPanel>
-        <TextBlock DockPanel.Dock="Top">Hello</TextBlock>
-        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" NewWindowRequested="weball_NewWindowRequested"
+        <StackPanel x:Name="menu" DockPanel.Dock="Top">
+            <Grid Margin="4 0">
+                <Grid.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="4, 4" />
+                    </Style>
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Background="Orange">AnimeGo</Button>
+                <Button Grid.Column="1" Background="MediumPurple">Anime9</Button>
+                <Button Grid.Column="2" Background="LimeGreen">AnimeOne</Button>
+                <Button Grid.Column="3" Background="LightPink">AnimeSakura</Button>
+            </Grid>
+        </StackPanel>
+        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" ToolTip="The browser that blocks ads and popups"
             ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged"
-            FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" ToolTip="The browser that blocks ads and popups"/>
+            FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" />
     </DockPanel>
 </Window>

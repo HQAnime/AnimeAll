@@ -20,11 +20,6 @@ namespace AnimeAll
             InitializeComponent();
         }
 
-        private void weball_NewWindowRequested(object sender, Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT.WebViewControlNewWindowRequestedEventArgs e)
-        {
-            Console.WriteLine(e.ToString());
-        }
-
         private void weball_ContainsFullScreenElementChanged(object sender, object e)
         {
             if ((sender as WebView).ContainsFullScreenElement)
