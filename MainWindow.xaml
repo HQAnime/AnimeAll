@@ -6,11 +6,12 @@
         x:Name="rootWindow"
         xmlns:local="clr-namespace:AnimeAll"
         xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowState="Maximized"
         Title="AnimeAll" Height="450" Width="800">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top">Hello</TextBlock>
         <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" NewWindowRequested="weball_NewWindowRequested"
-            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged" DOMContentLoaded="weball_DOMContentLoaded"/>
+            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged"
+            FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" ToolTip="The browser that blocks ads and popups"/>
     </DockPanel>
 </Window>

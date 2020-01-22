@@ -1,19 +1,7 @@
 ﻿using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
 using Microsoft.Toolkit.Wpf.UI.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Windows.UI.ViewManagement;
 
 namespace AnimeAll
 {
@@ -24,10 +12,7 @@ namespace AnimeAll
     {
         private readonly string[] script = new string[]
         {
-            "$('.image-with-text').remove();",
-            "$('.ad-bebi').remove();",
-            "$('.anime_video_body_comment_center').remove();",
-            "alert('hello world')"
+            @"$('.image-with-text, .ad-bebi, .bebi-icon-hover, img[border]').remove();",
         };
 
         public MainWindow()
@@ -62,10 +47,20 @@ namespace AnimeAll
             }
         }
 
-        private void weball_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        private void injectJS(string msg)
         {
             weball.InvokeScriptAsync("eval", this.script);
-            Console.WriteLine("Script has been invoked");
+            Console.WriteLine("Script has been invoked, " + msg);
+        }
+
+        private void weball_FrameDOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        {
+            injectJS("FrameDOM");
+        }
+
+        private void weball_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        {
+            injectJS("OMContent");
         }
     }
 }
