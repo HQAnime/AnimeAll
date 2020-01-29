@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace AnimeAll.Core
 {
     public class AnimeAll : AnimeBase
@@ -24,6 +26,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
+            Console.WriteLine(anime.WebViewSource());
             return anime.WebViewSource();
         }
 

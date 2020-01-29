@@ -5,7 +5,7 @@ namespace AnimeAll.Core
     {
         public void InjectJS()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         public bool IsThisMySite(Website site)
@@ -15,7 +15,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
-            throw new System.NotImplementedException();
+            return "http://www.yhdm.tv/";
         }
     }
 }

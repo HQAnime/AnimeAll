@@ -6,7 +6,7 @@ namespace AnimeAll.Core
     {
         public void InjectJS()
         {
-            throw new NotImplementedException();
+
         }
 
         public bool IsThisMySite(Website site)
@@ -16,7 +16,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
-            throw new NotImplementedException();
+            return "https://9animes.ru/9anime.ru";
         }
     }
 }

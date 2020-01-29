@@ -16,7 +16,7 @@ namespace AnimeAll
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var browser = new Browser(Website.AnimeOne);
-            browser.Show();
+            browser.ShowDialog();
         }
     }
 }
