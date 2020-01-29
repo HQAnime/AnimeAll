@@ -11,12 +11,13 @@ namespace AnimeAll
     /// </summary>
     public partial class Browser : Window
     {
-        private Core.AnimeAll anime;
+        private AnimeFactory anime;
 
         public Browser(Website site)
         {
             InitializeComponent();
-            anime = new Core.AnimeAll(site);
+            anime = new AnimeFactory(site);
+            weball.Source = new Uri(anime.WebViewSource());
         }
 
         [Obsolete]
@@ -44,12 +45,14 @@ namespace AnimeAll
 
         private void weball_FrameDOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
         {
-            anime.InjectJS();
+            Console.WriteLine(e.ToString());
+            //anime.InjectJS();
         }
 
         private void weball_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
         {
-            anime.InjectJS();
+            Console.WriteLine(e.ToString());
+            //anime.InjectJS();
         }
     }
 }

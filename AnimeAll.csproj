@@ -96,7 +96,7 @@
       <DependentUpon>Browser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Core\Anime9.cs" />
-    <Compile Include="Core\AnimeAll.cs" />
+    <Compile Include="Core\AnimeFactory.cs" />
     <Compile Include="Core\AnimeBase.cs" />
     <Compile Include="Core\AnimeGo.cs" />
     <Compile Include="Core\AnimeOne.cs" />

@@ -3,7 +3,7 @@ using System;
 
 namespace AnimeAll.Core
 {
-    public class AnimeAll : AnimeBase
+    public class AnimeFactory : AnimeBase
     {
         private AnimeBase anime;
         private static AnimeBase[] animes =
@@ -14,7 +14,7 @@ namespace AnimeAll.Core
             new AnimeSakura(),
         };
 
-        public AnimeAll(Website site)
+        public AnimeFactory(Website site)
         {
             IsThisMySite(site);
         }
@@ -37,6 +37,7 @@ namespace AnimeAll.Core
                 if (anime.IsThisMySite(site))
                 {
                     this.anime = anime;
+                    break;
                 }
             }
 
