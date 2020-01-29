@@ -13,10 +13,30 @@ namespace AnimeAll
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ShowBrowser(Website site)
         {
-            var browser = new Browser(Website.AnimeOne);
+            var browser = new Browser(site);
             browser.ShowDialog();
+        }
+
+        private void AnimeGo_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBrowser(Website.AnimeGo);
+        }
+
+        private void Anime9_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBrowser(Website.Anime9);
+        }
+
+        private void AnimeOne_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBrowser(Website.AnimeOne);
+        }
+
+        private void AnimeSakura_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBrowser(Website.AnimeSakura);
         }
     }
 }

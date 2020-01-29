@@ -15,7 +15,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
-            return "http://www.yhdm.tv/";
+            return "http://m.yhdm.tv/";
         }
     }
 }

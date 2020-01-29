@@ -3,28 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        x:Name="rootWindow" mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="AnimeAll" Height="450" Width="800">
-    <DockPanel>
-        <StackPanel x:Name="menu" DockPanel.Dock="Top">
-            <Grid Margin="4 0">
-                <Grid.Resources>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Margin" Value="4, 4" />
-                    </Style>
-                </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Background="Orange" Click="Button_Click">AnimeGo</Button>
-                <Button Grid.Column="1" Background="MediumPurple">Anime9</Button>
-                <Button Grid.Column="2" Background="LimeGreen">AnimeOne</Button>
-                <Button Grid.Column="3" Background="LightPink">AnimeSakura</Button>
-            </Grid>
-        </StackPanel>
-
-    </DockPanel>
+    <Grid Margin="4 0">
+        <Grid.Resources>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="Margin" Value="8" />
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="AnimeGo" Grid.Column="0" Background="Orange" Click="AnimeGo_Click">AnimeGo</Button>
+        <Button x:Name="Anime9" Grid.Column="1" Background="MediumPurple" Click="Anime9_Click">Anime9</Button>
+        <Button x:Name="AnimeOne" Grid.Column="2" Background="LimeGreen" Click="AnimeOne_Click">AnimeOne</Button>
+        <Button x:Name="AnimeSakura" Grid.Column="3" Background="LightPink" Click="AnimeSakura_Click">AnimeSakura</Button>
+    </Grid>
 </Window>

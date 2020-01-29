@@ -17,41 +17,41 @@ namespace AnimeAll
         {
             InitializeComponent();
             anime = new AnimeFactory(site);
-            weball.Source = new Uri(anime.WebViewSource());
+            browser.Source = new Uri(anime.WebViewSource());
         }
 
         [Obsolete]
-        private void weball_ContainsFullScreenElementChanged(object sender, object e)
+        private void browser_ContainsFullScreenElementChanged(object sender, object e)
         {
             if ((sender as WebView).ContainsFullScreenElement)
             {
                 // Fullscreen
-                rootWindow.Visibility = Visibility.Collapsed;
-                rootWindow.WindowStyle = WindowStyle.None;
-                rootWindow.ResizeMode = ResizeMode.NoResize;
-                rootWindow.WindowState = WindowState.Maximized;
-                rootWindow.Topmost = true;
-                rootWindow.Visibility = Visibility.Visible;
+                window.Visibility = Visibility.Collapsed;
+                window.WindowStyle = WindowStyle.None;
+                window.ResizeMode = ResizeMode.NoResize;
+                window.WindowState = WindowState.Maximized;
+                window.Topmost = true;
+                window.Visibility = Visibility.Visible;
             }
             else
             {
                 // Exit Fullscreen
-                rootWindow.WindowStyle = WindowStyle.SingleBorderWindow;
-                rootWindow.WindowState = WindowState.Normal;
-                rootWindow.ResizeMode = ResizeMode.CanResize;
-                rootWindow.Topmost = false;
+                window.WindowStyle = WindowStyle.SingleBorderWindow;
+                window.WindowState = WindowState.Normal;
+                window.ResizeMode = ResizeMode.CanResize;
+                window.Topmost = false;
             }
         }
 
-        private void weball_FrameDOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        private void browser_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
         {
-            Console.WriteLine(e.ToString());
+            Console.WriteLine(browser.Source);
             //anime.InjectJS();
         }
 
-        private void weball_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
+        private void browser_Loaded(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(e.ToString());
+            Console.WriteLine(browser.Source);
             //anime.InjectJS();
         }
     }

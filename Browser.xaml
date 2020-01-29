@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
-        mc:Ignorable="d" x:Name="rootWindow" Title="Browser" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <DockPanel>
-        <WPF:WebView DockPanel.Dock="Top" x:Name="weball" ToolTip="The browser that blocks ads and popups"
-            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged"
-            FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" />
-    </DockPanel>
+        mc:Ignorable="d" x:Name="window" Title="Browser" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    
+    <WPF:WebView x:Name="browser" ToolTip="The browser that blocks ads and popups" 
+            ContainsFullScreenElementChanged="browser_ContainsFullScreenElementChanged" Loaded="browser_Loaded"
+            FrameDOMContentLoaded="browser_DOMContentLoaded" DOMContentLoaded="browser_DOMContentLoaded" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+    
 </Window>
