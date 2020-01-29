@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace AnimeAll.Core
 {
     interface AnimeBase
@@ -18,6 +13,12 @@ namespace AnimeAll.Core
         /// </summary>
         /// <param name="site">one of the webiste enum</param>
         /// <returns>true if enum matches</returns>
-        bool IsThisMySite(Website site); 
+        bool IsThisMySite(Website site);
+
+        /// <summary>
+        /// The source of webview
+        /// </summary>
+        /// <returns>the website link</returns>
+        string WebViewSource();
     }
 }

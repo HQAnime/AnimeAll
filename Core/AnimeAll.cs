@@ -1,7 +1,7 @@
 ﻿
 namespace AnimeAll.Core
 {
-    public class AnimeAll
+    public class AnimeAll : AnimeBase
     {
         private AnimeBase anime;
         private static AnimeBase[] animes =
@@ -14,6 +14,21 @@ namespace AnimeAll.Core
 
         public AnimeAll(Website site)
         {
+            IsThisMySite(site);
+        }
+
+        public void InjectJS()
+        {
+            anime.InjectJS();
+        }
+
+        public string WebViewSource()
+        {
+            return anime.WebViewSource();
+        }
+
+        public bool IsThisMySite(Website site)
+        {
             foreach (AnimeBase anime in animes)
             {
                 if (anime.IsThisMySite(site))
@@ -21,11 +36,8 @@ namespace AnimeAll.Core
                     this.anime = anime;
                 }
             }
-        }
 
-        public void InjectJS()
-        {
-            anime.InjectJS();
+            return false;
         }
     }
 }

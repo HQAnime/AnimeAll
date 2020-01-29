@@ -1,7 +1,4 @@
-﻿using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
-using Microsoft.Toolkit.Wpf.UI.Controls;
-using System;
-using System.Windows;
+﻿using System.Windows;
 using AnimeAll.Core;
 
 namespace AnimeAll

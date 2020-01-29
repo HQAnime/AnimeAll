@@ -1,5 +1,7 @@
-﻿using AnimeAll.Core;
+﻿using System;
+using AnimeAll.Core;
 using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
+using Microsoft.Toolkit.Wpf.UI.Controls;
 using System.Windows;
 
 namespace AnimeAll
@@ -17,6 +19,7 @@ namespace AnimeAll
             anime = new Core.AnimeAll(site);
         }
 
+        [Obsolete]
         private void weball_ContainsFullScreenElementChanged(object sender, object e)
         {
             if ((sender as WebView).ContainsFullScreenElement)

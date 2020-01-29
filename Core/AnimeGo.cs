@@ -10,6 +10,11 @@ namespace AnimeAll.Core
 
         public bool IsThisMySite(Website site)
         {
+            return site == Website.AnimeGo;
+        }
+
+        public string WebViewSource()
+        {
             throw new System.NotImplementedException();
         }
     }

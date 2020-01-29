@@ -3,12 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimeAll"
         xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
-        mc:Ignorable="d"
-        Title="Browser" Height="450" Width="800">
+        mc:Ignorable="d" x:Name="rootWindow" Title="Browser" Height="450" Width="800">
     <DockPanel>
-        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" ToolTip="The browser that blocks ads and popups"
+        <WPF:WebView Source="" x:Name="weball" ToolTip="The browser that blocks ads and popups"
             ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged"
             FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" />
     </DockPanel>
