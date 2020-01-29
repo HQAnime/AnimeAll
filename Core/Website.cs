@@ -4,7 +4,7 @@ namespace AnimeAll.Core
     /// <summary>
     /// All available websites
     /// </summary>
-    enum Website
+    public enum Website
     {
         AnimeGo,
         AnimeOne,

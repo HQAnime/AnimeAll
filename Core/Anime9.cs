@@ -2,10 +2,14 @@
 
 namespace AnimeAll.Core
 {
-    [Obsolete]
     class Anime9 : AnimeBase
     {
-        public override void InjectJS()
+        public void InjectJS()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsThisMySite(Website site)
         {
             throw new NotImplementedException();
         }

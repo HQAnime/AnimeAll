@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using AnimeAll.Core;
+﻿using AnimeAll.Core;
+using System.Windows;
 
 namespace AnimeAll
 {
@@ -8,10 +8,14 @@ namespace AnimeAll
     /// </summary>
     public partial class Browser : Window
     {
-        private AnimeBase anime;
-        public Browser(string url)
+        private Core.AnimeAll anime;
+
+        public Browser(Website site)
         {
             InitializeComponent();
+            anime = new Core.AnimeAll(site);
         }
+
+
     }
 }
