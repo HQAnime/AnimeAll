@@ -52,5 +52,10 @@ namespace AnimeAll
         {
             anime.InjectJS(browser);
         }
+
+        private void window_Closed(object sender, EventArgs e)
+        {
+            GC.Collect();
+        }
     }
 }

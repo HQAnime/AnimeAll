@@ -7,7 +7,7 @@ namespace AnimeAll.Core
     {
         private readonly string[] script = new string[]
         {
-            @"$('.image-with-text, .ad-bebi, .bebi-icon-hover, img[border]').remove();",
+            @"$('#bdshare, div[style]').remove();",
         };
 
         public void InjectJS(WebView view)
@@ -22,7 +22,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
-            return "http://m.yhdm.tv/";
+            return "http://www.yhdm.tv/";
         }
     }
 }
