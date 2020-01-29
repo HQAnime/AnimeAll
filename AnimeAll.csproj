@@ -80,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Browser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,6 +92,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Browser.xaml.cs">
+      <DependentUpon>Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Anime9.cs" />
+    <Compile Include="Core\AnimeAll.cs" />
+    <Compile Include="Core\AnimeBase.cs" />
+    <Compile Include="Core\AnimeGo.cs" />
+    <Compile Include="Core\AnimeOne.cs" />
+    <Compile Include="Core\AnimeSakura.cs" />
+    <Compile Include="Core\Website.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

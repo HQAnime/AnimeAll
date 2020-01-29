@@ -3,10 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        x:Name="rootWindow"
-        xmlns:local="clr-namespace:AnimeAll"
-        xmlns:WPF="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        x:Name="rootWindow" mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="AnimeAll" Height="450" Width="800">
     <DockPanel>
         <StackPanel x:Name="menu" DockPanel.Dock="Top">
@@ -22,14 +19,12 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Background="Orange">AnimeGo</Button>
+                <Button Grid.Column="0" Background="Orange" Click="Button_Click">AnimeGo</Button>
                 <Button Grid.Column="1" Background="MediumPurple">Anime9</Button>
                 <Button Grid.Column="2" Background="LimeGreen">AnimeOne</Button>
                 <Button Grid.Column="3" Background="LightPink">AnimeSakura</Button>
             </Grid>
         </StackPanel>
-        <WPF:WebView Source="https://www2.gogoanimes.ai" x:Name="weball" ToolTip="The browser that blocks ads and popups"
-            ContainsFullScreenElementChanged="weball_ContainsFullScreenElementChanged"
-            FrameDOMContentLoaded="weball_FrameDOMContentLoaded" DOMContentLoaded="weball_DOMContentLoaded" />
+
     </DockPanel>
 </Window>
