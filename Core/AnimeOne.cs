@@ -7,7 +7,7 @@ namespace AnimeAll.Core
     {
         private readonly string[] script = new string[]
         {
-            @"$('img').remove();",
+            @"$('.widget-title').remove();",
         };
 
         public void InjectJS(WebView view)

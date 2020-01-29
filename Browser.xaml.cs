@@ -57,5 +57,10 @@ namespace AnimeAll
         {
             GC.Collect();
         }
+
+        private void browser_SourceUpdated(object sender, System.Windows.Data.DataTransferEventArgs e)
+        {
+            Console.WriteLine(e.Source);
+        }
     }
 }

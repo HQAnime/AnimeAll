@@ -8,6 +8,7 @@
     
     <WPF:WebView x:Name="browser" ToolTip="The browser that blocks ads and popups" 
         ContainsFullScreenElementChanged="browser_ContainsFullScreenElementChanged" Loaded="browser_Loaded"
-        FrameDOMContentLoaded="browser_DOMContentLoaded" DOMContentLoaded="browser_DOMContentLoaded" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+        FrameDOMContentLoaded="browser_DOMContentLoaded" DOMContentLoaded="browser_DOMContentLoaded" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+        SourceUpdated="browser_SourceUpdated"/>
 
 </Window>
