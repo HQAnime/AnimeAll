@@ -45,14 +45,12 @@ namespace AnimeAll
 
         private void browser_DOMContentLoaded(object sender, WebViewControlDOMContentLoadedEventArgs e)
         {
-            Console.WriteLine(browser.Source);
-            //anime.InjectJS();
+            anime.InjectJS(browser);
         }
 
         private void browser_Loaded(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(browser.Source);
-            //anime.InjectJS();
+            anime.InjectJS(browser);
         }
     }
 }

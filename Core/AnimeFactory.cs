@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Toolkit.Wpf.UI.Controls;
 using System;
 
 namespace AnimeAll.Core
@@ -19,9 +20,9 @@ namespace AnimeAll.Core
             IsThisMySite(site);
         }
 
-        public void InjectJS()
+        public void InjectJS(WebView view)
         {
-            anime.InjectJS();
+            anime.InjectJS(view);
         }
 
         public string WebViewSource()

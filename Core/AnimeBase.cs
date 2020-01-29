@@ -1,4 +1,5 @@
-﻿
+﻿using Microsoft.Toolkit.Wpf.UI.Controls;
+
 namespace AnimeAll.Core
 {
     interface AnimeBase
@@ -6,7 +7,7 @@ namespace AnimeAll.Core
         /// <summary>
         /// Inject some JS code to webview (remove ads and more)
         /// </summary>
-        void InjectJS();
+        void InjectJS(WebView view);
 
         /// <summary>
         /// Check if this site is my site
