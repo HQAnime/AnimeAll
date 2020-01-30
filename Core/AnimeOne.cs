@@ -7,7 +7,8 @@ namespace AnimeAll.Core
     {
         private readonly string[] script = new string[]
         {
-            @"$('.widget-title').remove();",
+            //@"$('.widget-title, ins, aside, .sidebar-discord').remove();",
+            @"$('.header-content, aside, ins, .site-info').remove();",
         };
 
         public void InjectJS(WebView view)
@@ -22,7 +23,7 @@ namespace AnimeAll.Core
 
         public string WebViewSource()
         {
-            return "https://anime1.me/";
+            return "https://www.anime1.me/關於";
         }
     }
 }

@@ -18,6 +18,7 @@ namespace AnimeAll
             InitializeComponent();
             anime = new AnimeFactory(site);
             browser.Source = new Uri(anime.WebViewSource());
+            this.WindowState = WindowState.Maximized;
         }
 
         [Obsolete]
@@ -58,9 +59,9 @@ namespace AnimeAll
             GC.Collect();
         }
 
-        private void browser_SourceUpdated(object sender, System.Windows.Data.DataTransferEventArgs e)
+        private void browser_ContentLoading(object sender, WebViewControlContentLoadingEventArgs e)
         {
-            Console.WriteLine(e.Source);
+            anime.InjectJS(browser);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace AnimeAll.Core
     {
         private readonly string[] script = new string[]
         {
-            @"$('.image-with-text, .ad-bebi, .bebi-icon-hover, img[border]').remove();",
+            @"$('.image-with-text, .ad-bebi, .bebi-icon-hover, img[border], a[target], .banner_center').remove();",
         };
 
         public void InjectJS(WebView view)
