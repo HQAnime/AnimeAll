@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using AnimeAll.Core;
 
 namespace AnimeAll
@@ -31,7 +32,8 @@ namespace AnimeAll
 
         private void AnimeOne_Click(object sender, RoutedEventArgs e)
         {
-            ShowBrowser(Website.AnimeOne);
+            var one = new AnimeOne();
+            Process.Start(one.WebViewSource());
         }
 
         private void AnimeSakura_Click(object sender, RoutedEventArgs e)
